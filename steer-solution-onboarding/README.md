@@ -1,5 +1,3 @@
-<img src="https://cdn.rawgit.com/hashicorp/terraform-website/master/content/source/assets/images/logo-hashicorp.svg" width="500px">
-
 # Overview
 
 The STEER interface provides the ability to perform video upload operations through a graphical user interface, making it easier for clinical researchers to manage the data in Clinical Data Lake (CDL).
