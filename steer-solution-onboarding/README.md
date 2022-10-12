@@ -1,18 +1,37 @@
 <img src="https://cdn.rawgit.com/hashicorp/terraform-website/master/content/source/assets/images/logo-hashicorp.svg" width="500px">
 
+# Overview
+
+The STEER interface provides the ability to perform video upload operations through a graphical user interface, making it easier for clinical researchers to manage the data in Clinical Data Lake (CDL).
+
 # Onboarding 
 
-Key Persona:
+Key Personas:
 
-`clinical_staff` : Clinical Staff
+`clinical_staff` (Clinical Staff/Institute coordinator) : 
+Group: SITEA_CLINICALSTAFFGROUP/SITEB_CLINICALSTAFFGROUP........SITEZ_CLINICALSTAFFGROUP
+Role: CLINICALSTAFFROLE
+Permission: USER.READ
 
-`master_trainer`: Trial Admin
+`master_trainer` (Master Trainer/Study Manager): 
+Group: MASTERTRAINERGROUP
+Role: MASTERTRAINERROLE
+Permission: USER.READ
 
-`research_manager`: Site Clinician
+`research_manager` (Technical Admin/Research Manager): 
+Group: RESEARCHOWNERGROUP
+Role: RESEARCHOWNERROLE
+Permission: CDL.RESEARCHMANAGER.ALL
 
-`technical_admin`: Technical Admin
+`technical_admin` (Technical Admin/Study Owner): 
+Group: TECHNICALADMINGROUP
+Role: TECHNICALADMINROLE
+Permission: USER.READ
 
-`tenant_admin`: Tenant Admin
+`tenant_admin` (Tenant Admin): 
+Group: TENANTADMINGROUP
+Role: TENANTADMINROLE
+Permission: CDL.TENANTADMIN.ALL
 
 ## Requirements
 
@@ -46,16 +65,7 @@ terraform workspace select steer
 
 ## Preparation
 
-1. Enter valid values in config/steer.tfvars
-2. Mention the sites in an array in variables.tf
-   Example as mentioned below : -
-
-    variable "clinical_staff_sites" {
-    description = "clinical staff sites"
-    type        = list(string)
-    default     = ["SITEA", "SITEB" ..... "SITEZ"]
-    }
-
+Enter valid values in config/steer.tfvars
 
 ## Execute:
 
@@ -65,9 +75,9 @@ terraform init
 terraform plan --var-file=config/steer.tfvars
 terraform apply --var-file=config/steer.tfvars
 ```
-To Destroy reources:
+To Destroy resources:
 ```sh
-terraform destroy --var-file=config/steer.tfvar
+terraform destroy --var-file=config/steer.tfvars
 ```
 
 To enable local logs - allowed values `[TRACE DEBUG INFO WARN ERROR OFF]`:

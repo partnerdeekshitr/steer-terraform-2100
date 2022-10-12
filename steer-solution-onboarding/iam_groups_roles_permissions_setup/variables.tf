@@ -10,7 +10,6 @@ variable "onboarding_iam_steer_org_id" {
 variable "clinical_staff_sites" {
   description = "clinical staff sites"
   type        = list(string)
-  default     = ["SITEA", "SITEB"]
 }
 
 variable "region" {

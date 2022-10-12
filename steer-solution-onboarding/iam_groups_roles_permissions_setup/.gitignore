@@ -1,6 +1,7 @@
 .terraform
+config/*.tfvars
+!config/steer.tfvars
 .terraform.lock.hcl
 terraform.tfstate
-terraform.tfstate.d
 terraform.tfstate.backup
 .DS_Store
