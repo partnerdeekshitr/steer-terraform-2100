@@ -1,6 +1,6 @@
 # Overview
 
-The STEER interface provides the ability to perform video upload operations through a graphical user interface, making it easier for clinical researchers to manage the data in Clinical Data Lake (CDL).
+This Terraform script is used to create Groups/Roles/Permissions for Clinical Staff/Master Trainer/Technical Admin/Tenant Admin
 
 # Onboarding 
 
