@@ -7,32 +7,36 @@ The STEER interface provides the ability to perform video upload operations thro
 # Onboarding 
 
 Key Personas:
-
+```sh
 `clinical_staff` (Clinical Staff/Institute coordinator) : 
 Group: SITEA_CLINICALSTAFFGROUP/SITEB_CLINICALSTAFFGROUP........SITEZ_CLINICALSTAFFGROUP
 Role: CLINICALSTAFFROLE
 Permission: USER.READ
-
+```
+```sh
 `master_trainer` (Master Trainer/Study Manager): 
 Group: MASTERTRAINERGROUP
 Role: MASTERTRAINERROLE
 Permission: USER.READ
-
+```
+```sh
 `research_manager` (Technical Admin/Research Manager): 
 Group: RESEARCHOWNERGROUP
 Role: RESEARCHOWNERROLE
 Permission: CDL.RESEARCHMANAGER.ALL
-
+```
+```sh
 `technical_admin` (Technical Admin/Study Owner): 
 Group: TECHNICALADMINGROUP
 Role: TECHNICALADMINROLE
 Permission: USER.READ
-
+```
+```sh
 `tenant_admin` (Tenant Admin): 
 Group: TENANTADMINGROUP
 Role: TENANTADMINROLE
 Permission: CDL.TENANTADMIN.ALL
-
+```
 ## Requirements
 
 | Name | Version |
