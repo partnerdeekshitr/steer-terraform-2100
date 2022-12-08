@@ -8,7 +8,8 @@ resource "hsdp_iam_group" "research_owner_group" {
 resource "hsdp_iam_role" "research_manager_role" {
   name = "RESEARCHOWNERROLE"
   permissions = [
-    "CDL.RESEARCHMANAGER.ALL"
+    "CDL.RESEARCHMANAGER.ALL",
+    "USER.READ"
   ]
   managing_organization = var.onboarding_iam_steer_org_id
 }
